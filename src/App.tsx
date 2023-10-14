@@ -1,11 +1,5 @@
-
-
 function App() {
-  return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
+  return <div> this is root</div>;
 }
 
-export default App
+export default App;
