@@ -1,15 +1,17 @@
-import BarChart from "./components/BarChart";
-import RecentOrder from "./components/RecentOrder";
-import TopCards from "./components/TopCards";
-
+import { Route, Routes } from "react-router-dom";
+import Cart from "./pages/cart";
+import Customers from "./pages/customers";
+import Dashboard from "./pages/dashboard";
+import Orders from "./pages/orders";
 function App() {
   return (
     <>
-      <TopCards />
-      <div className="p-4 grid md:grid-cols-3 grid-cols-1 gap-4">
-        <BarChart />
-        <RecentOrder />
-      </div>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/orders" element={<Orders />} />
+        <Route path="/customers" element={<Customers />} />
+      </Routes>
     </>
   );
 }
